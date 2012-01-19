@@ -47,7 +47,8 @@ module NoteShare
 	
 	# Initialize the public group (make sure that the public admin exists)
 	config.after_initialize do
-		Group.find_by_name('public') || Group.create(:name => 'public', :admin => User.find_by_name('allonhadaya'), :members => [User.anonymous])
+		Group.public || Group.public!
+		User.anonymous || User.anonymous!
 	end
   end
 end

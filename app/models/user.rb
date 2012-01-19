@@ -12,6 +12,6 @@ class User < ActiveRecord::Base
 	end
 	
 	def self.anonymous
-		find_or_create_by_name('anonymous')
+		find_by_name('anonymous')
 	end
 end

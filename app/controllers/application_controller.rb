@@ -49,7 +49,7 @@ class ApplicationController < ActionController::Base
 				store_location
 				flash[:notice] = "Parameter :group_name required"
 				return false
-			end		
+			end
 		end
 		
 		def require_group_admin
