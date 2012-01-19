@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem 'sqlite3'
 gem 'jquery-rails'
 gem 'authlogic'
+gem 'acl9'
 gem 'etherpad-lite'
 
 group :assets do

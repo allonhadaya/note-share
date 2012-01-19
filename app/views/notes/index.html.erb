@@ -1,0 +1,24 @@
+<h1><%= @group.name %></h1>
+
+<div class="note" id="note-new">
+	<div class="note-header">
+		<%= form_tag("/#{@group.name}/new", :method => "get", :remote => true) do %>
+			<%= text_field_tag 'note-name', nil, :placeholder => 'note title' %>
+		<% end %>
+		<!-- no date -->
+	</div>
+	<div class="note-body"></div>
+</div>
+
+<% @group.notes.each do |note| %>
+
+<div class="note" id="note-<%= note.id %>">
+	<div class="note-header">
+		<div class="note-title"><%= note.name %></div>
+		<div class="note-date"><%= note.updated_at.getlocal.strftime("%b. %d - %I:%M %p") %></div>
+	</div>
+	<div class="note-body"></div>
+</div>
+
+<% end %>
+<br />

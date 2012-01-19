@@ -44,5 +44,10 @@ module NoteShare
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+	
+	# Initialize the public group (make sure that the public admin exists)
+	config.after_initialize do
+		Group.find_by_name('public') || Group.create(:name => 'public', :admin => User.find_by_name('allonhadaya'), :members => [User.anonymous])
+	end
   end
 end

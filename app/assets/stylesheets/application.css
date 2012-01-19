@@ -1,7 +1,84 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree . 
-*/
+/* general */
+html,body {
+	margin:0;
+	padding:0;
+}
+body {
+	font:85%/1.3 TrebuchetMS,Arial,sans-serif;
+	text-align:left;
+	background:#fff;
+	padding-bottom:20px;
+}
+textarea {
+	font: 95%/1.3 TrebuchetMS,Arial,sans-serif;
+}
+a {
+	color:#0066B3;
+	background:inherit;
+	text-decoration:none;
+}
+h1 {
+	font:bold 2.1em Arial, Arial, Sans-Serif;
+	color:#036DA7;
+}
+h2 {
+	font:bold 1.1em Arial, Arial, Sans-Serif;
+	padding:0;
+	margin:0;
+}
+
+/* header */
+div#header {
+	width:100%;
+	overflow:hidden;
+	background:#BBD9EE;
+}
+div#inner-header {
+	width:720px;
+	margin:0 auto 0 auto;
+}
+h1#header-title {
+	float:left;
+	margin:20px 0 0 0;
+	color:#fff;
+}
+div#header-search {
+	float:right;
+	margin:20px 0 0 -100%;
+}
+
+/* content */
+div#content {
+	font: 95%/1.3 TrebuchetMS,Arial,sans-serif;
+	width: 720px;
+	margin: 20px auto 0 auto;
+	background: #fff;
+}
+
+/* note */
+div.note {
+	height:300px;
+	padding:15px;
+	margin-bottom:20px;
+	background: #eee;
+}
+div.note:hover {
+	outline: 5px #FFF6BF solid;
+}
+div.note-header {
+	margin-bottom:30px;
+	font-style:italic
+}
+.note-title {
+	float:left;
+	height:16px;
+	width:680px;
+	resize:none;
+}
+.note-date {
+	float:right
+}
+.note-body {
+	width:680px;
+	height:300px;
+}

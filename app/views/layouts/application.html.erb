@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NoteShare</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Note Share</title>
+	<%= stylesheet_link_tag    "application" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+	<!-- header -->
+	<div id="header">
+		<div id="inner-header">
+			<h1 id="header-title">Note Share</h1>
+			<div id="header-search">
+				<%= form_tag("/search", :method => "get", :remote => true) do %>
+					<%= text_field_tag 'q', nil, :placeholder => 'Search' %>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<!-- content -->
+	<div id="content">
+		<%= yield %>
+	</div>
 </body>
 </html>
